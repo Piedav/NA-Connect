@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Post Creator</title>
+	<style>
+		body {background-color: #fafafa;}
+
+		h1 {
+			text-align: center;
+      font-family: Verdana;
+			color: darkblue;
+		}
+
+		.labels {
+			margin-left: 75px;
+			margin-right: 75px;
+			font-family: Verdana;
+			color: midnightblue;
+			font-weight: bold;
+		}
+
+		.textbox {
+			margin-left: 75px;
+			margin-right: 75px;
+			border: none;
+			border-bottom: 3px solid blue;
+			border-radius: 10px;
+			font-family: Verdana;
+			outline: none;
+			color: #0f0e12;
+			background-color: #fafafa;
+			margin-bottom: 20px;
+		}
+
+		.textbox:focus {
+			background-color: azure;
+		}
+
+		#btn {
+			margin-left: 75px;
+			margin-right: 75px;
+			padding: 12px 28px;
+			font-family: Verdana;
+			border-radius: 12px;
+			background-color: #008CBA;
+			color: white;
+			opacity: 0.6;
+			transition: 0.25s;
+			cursor: pointer;
+			display: inline-block;
+		}
+		#btn:hover {opacity: 1}
+
+		.opts {
+			color: white;
+			background-color: dodgerblue;
+			font-size: 18px;
+			padding: 12px 28px;
+			border-radius: 12px;
+			font-family: Verdana;
+			text-align: center;
+			opacity: 0.6;
+			transition: 0.25s;
+			cursor: pointer;
+			display: inline-block;
+		}
+		.opts:hover {opacity: 1}
+
+	</style>
+</head>
+<body>
+  <img src="https://cdn.discordapp.com/attachments/1109480762312495124/1109502940365992006/NA_Connect_Logo.png" alt="NA Connect" class="center">
+	<h1>
+		Post Creator
+	</h1>
+	<form method="post">
+    <div class="form-group">
+			<p class="labels">
+				Choose a Thread from below or make your own: 
+			</p>
+			<p class="labels">
+				{% for tag in tags %}
+				{{ tag }}, 
+				{% endfor %}
+        <label for="name"></label>
+        <input class="textbox" type="text" name='name'
+               placeholder="Thread Name" class="form-control"
+               value="{{ request.form['name'] }}"></input>
+			</p>
+    </div>
+
+    <div class="form-group">
+			<p class="labels">Post Content: </p>
+        <label for="content"></label>
+        <textarea class="textbox" name="content" placeholder="Post content"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" id="btn" class="btn btn-primary" action = "/forum/" method = 'GET'>Post</button>
+    </div>
+</form>
+	{% set link = '/forum/?language=python&name=' + name %}
+	<a href='{{ link }}' id="btn">Back to Home</a>
+</body>
+</html>

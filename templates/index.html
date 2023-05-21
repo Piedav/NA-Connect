@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NA Connect</title>
+	<style>
+		h1 {
+			color: black;
+			text-align: center;
+      font-size: 70px;
+      font-family: Verdana;
+      /* padding: 3px 28px;  */
+		}
+    
+		.tex {
+			text-align: center;
+			color: #787878;
+      /* background-color: black; */
+			font-family: Verdana;
+			/* padding: 10% 20%; */
+      font-size: 2vw;
+      /* input[type=text] {
+        background-color: white;
+      }  */
+		}
+    .tex:hover {opacity: 1}
+    
+		.texb {
+			text-align: right;
+		}
+    .texc {
+			text-align: center;
+			color: #787878;
+      /* background-color: black; */
+			font-family: Verdana;
+			padding: 5% 10%;
+      font-size: 2vw;
+      /* input[type=text] {
+        background-color: white;
+      }  */
+		}
+    .texc:hover {opacity: 1}
+    
+		.nameEnter {
+      /* border: 2px solid #e6d29c;
+      background-color: #f7f2d5;
+      color: #735624; */
+      border: 3px solid #a1a1a1;
+      background-color: #c7c7c7;
+      color: #383838;
+      border-radius: 10px;
+      text-align: center;
+      font-family: Verdana;
+      padding: 3px 6px;
+      font-size: 100%;
+    }
+    .nameEnter:hover {
+			opacity: 1;
+			cursor: pointer
+		}
+    .nameEnter2 {
+      /* border: 2px solid #e6d29c;
+      background-color: #f7f2d5;
+      color: #735624; */
+      border: 3px solid #ebebeb;
+      background-color: #f2f2f2;
+      color: #b5b5b5;
+      border-radius: 10px;
+      text-align: center;
+      font-family: Verdana;
+      padding: 3px 6px;
+      font-size: 100%;
+    }
+    .nameEnter2:hover {opacity: 1}
+		.opts {
+			color: #735624;
+			background-color: #f7f2d5;
+			font-size: 18px;
+			padding: 52px 18px;
+			border-radius: 12px;
+      border: 2px solid #e6d29c;
+			font-family: Verdana;
+			text-align: center;
+			opacity: 0.6;
+			transition: 0.25s;
+			cursor: pointer;
+			display: inline-block;
+      width: 22%
+      font-size: 500%;
+		}
+		.opts:hover {opacity: 1}
+		.center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+    }
+		body {background-color: #fafafa;}
+	</style>
+</head>
+<body>
+	<img src="https://cdn.discordapp.com/attachments/1109480762312495124/1109502940365992006/NA_Connect_Logo.png" alt="NA Connect" class = "center">
+  <p class=texc>
+Welcome to NA Connect, a space where you can connect with others and find groups or partners for a variety of purposes, whether thats to find someone to play tennis with, ask about a question on the study guide for next period's test, or just to chat. Get started by inputting your name below!
+  </p>
+	<!-- <form method=“post”>
+  	<br class="tex">User
+		
+  <input type=“text” name=“name” size=“50” maxlength=“45”> -->
+	<form action='/forum/' method = 'POST' >
+		<p class="tex">
+			<input type = "text" value = "" class="nameEnter2" name = "uname"/>
+			<input type = "submit" value = "Enter" class="nameEnter" name = "uname"/>
+		</p>
+    
+	</form>
+	
+
+</form>
+	<br><br>
+</body>
+</html>
