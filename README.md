@@ -3,6 +3,7 @@ NA Connect is a forum where you can chat with people in the local NA community. 
 
 # Contributors
 Kaartic Muralidharan, Ayush Srivastava, David Mao
+# Discords
 Mep#4351, armoredpawn#3549, Pied#7136
 
 # Goals
